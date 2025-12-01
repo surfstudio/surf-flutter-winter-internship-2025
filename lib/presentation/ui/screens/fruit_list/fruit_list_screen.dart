@@ -24,7 +24,7 @@ class FruitListScreen extends StatelessWidget {
       body:  vm.isLoading
           ? const Center(child: CircularProgressIndicator())
           : vm.fruits.isEmpty
-          ? EmptyStateWidget(onRefresh: () {vm.retry();}, message: AppStrings.emptyFruitList, icon: Icons.apple)
+          ? EmptyStateWidget(onRefresh: () {vm.retry();}, message: AppStrings.emptyFruitList, icon: Icons.apple, buttonText: AppStrings.refresh,)
           : vm.hasError
           ? ErrorStateWidget(onRetry: () {vm.retry();},)
           : ListView.builder(

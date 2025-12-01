@@ -28,32 +28,33 @@ class RecipeListScreen extends StatelessWidget {
           ? const Center(child: CircularProgressIndicator())
           : vm.recipes.isEmpty
           ? EmptyStateWidget(
-        onRefresh: () {
-          vm.retry();
-        },
-        message: AppStrings.emptyRecipeList,
-        icon: Icons.library_books,
-      )
+              onRefresh: () {
+                vm.onCreateRecipeTap(context);
+              },
+              message: AppStrings.emptyRecipeList,
+              icon: Icons.library_books,
+              buttonText: AppStrings.createRecipe,
+            )
           : vm.hasError
           ? ErrorStateWidget(
-        onRetry: () {
-          vm.retry();
-        },
-      )
+              onRetry: () {
+                vm.retry();
+              },
+            )
           : ListView.builder(
-        padding: const EdgeInsets.all(16),
-        itemCount: vm.recipes.length,
-        itemBuilder: (BuildContext context, int index) {
-          final recipe = vm.recipes[index];
-          return Padding(
-            padding: const EdgeInsets.only(bottom: 12),
-            child: RecipeCardWidget(
-              recipe: recipe,
-              onDeleteTap: () => vm.onDeleteRecipeTap(recipe),
+              padding: const EdgeInsets.all(16),
+              itemCount: vm.recipes.length,
+              itemBuilder: (BuildContext context, int index) {
+                final recipe = vm.recipes[index];
+                return Padding(
+                  padding: const EdgeInsets.only(bottom: 12),
+                  child: RecipeCardWidget(
+                    recipe: recipe,
+                    onDeleteTap: () => vm.onDeleteRecipeTap(recipe),
+                  ),
+                );
+              },
             ),
-          );
-        },
-      ),
     );
   }
 }

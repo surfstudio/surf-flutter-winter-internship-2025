@@ -14,6 +14,6 @@ class MainNavigation {
   }
 
   static void pop<T>(BuildContext context, [T? result]) {
-    MainNavigation.pop(context, result);
+    Navigator.of(context).pop(result);
   }
 }

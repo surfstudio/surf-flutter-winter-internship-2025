@@ -22,7 +22,7 @@ class FavoritesScreen extends StatelessWidget {
       body:  vm.isLoading
           ? const Center(child: CircularProgressIndicator())
           : vm.isEmpty
-          ? EmptyStateWidget(onRefresh: () {vm.retry();}, message: AppStrings.emptyFavorites, icon: Icons.favorite_border)
+          ? EmptyStateWidget(onRefresh: () {vm.retry();}, message: AppStrings.emptyFavorites, icon: Icons.favorite_border, buttonText: AppStrings.refresh)
           : vm.hasError
           ? ErrorStateWidget(onRetry: () {vm.retry();},)
           : ListView.builder(

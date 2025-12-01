@@ -5,12 +5,14 @@ import 'package:surf_flutter_winter_internship_2025/presentation/ui/uikit/text_s
 class EmptyStateWidget extends StatelessWidget {
   final VoidCallback onRefresh;
   final String message;
+  final String buttonText;
   final IconData icon;
 
   const EmptyStateWidget({super.key,
     required this.onRefresh,
     required this.message,
     required this.icon,
+    required this.buttonText,
   });
 
   @override
@@ -28,7 +30,7 @@ class EmptyStateWidget extends StatelessWidget {
           const SizedBox(height: 8),
           ElevatedButton(
             onPressed: onRefresh,
-            child: const Text('Обновить'),
+            child: Text('$buttonText'),
           ),
         ],
       ),
