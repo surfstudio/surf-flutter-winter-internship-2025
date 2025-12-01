@@ -1,6 +1,8 @@
 import 'package:surf_flutter_winter_internship_2025/domain/repositories/i_recipe_repository.dart';
 
-class DeleteRecipeUseCase {
+import 'interfaces/i_delete_recipe_use_case.dart';
+
+class DeleteRecipeUseCase implements IDeleteRecipeUseCase {
   final IRecipeRepository _recipeRepository;
 
   const DeleteRecipeUseCase({required IRecipeRepository recipeRepository})

@@ -1,7 +1,9 @@
 import 'package:surf_flutter_winter_internship_2025/domain/entities/fruit.dart';
 import 'package:surf_flutter_winter_internship_2025/domain/repositories/i_favorites_repository.dart';
 
-class ToggleFavoriteUseCase {
+import 'interfaces/i_toggle_favorite_use_case.dart';
+
+class ToggleFavoriteUseCase implements IToggleFavoriteUseCase {
   final IFavoritesRepository _favoriteRepository;
 
   ToggleFavoriteUseCase({required IFavoritesRepository favoriteRepository})

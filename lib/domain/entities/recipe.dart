@@ -1,6 +1,7 @@
 import 'package:equatable/equatable.dart';
-import 'package:surf_flutter_winter_internship_2025/domain/entities/fruit.dart';
 import 'package:surf_flutter_winter_internship_2025/domain/entities/nutrition.dart';
+
+import 'fruit.dart';
 
 class Recipe extends Equatable {
   final String id;
