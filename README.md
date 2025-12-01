@@ -53,3 +53,8 @@ Nutrition-tech приложение для подбора фруктов и со
 - **Networking**: Retrofit для HTTP запросов
 - **Local Storage**: SQLite через sqflite
 - **Navigation**: Custom Navigator (`MainNavigation`)
+
+## 🎥 Демонстрация
+
+### Скачать видео
+[Скачать демонстрационное видео](https://github.com/username/repository-name/releases/download/v1.0/demo-video.mp4)
